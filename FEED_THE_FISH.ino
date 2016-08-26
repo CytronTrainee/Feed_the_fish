@@ -9,7 +9,7 @@ const char* mqtt_server = "mqtt.espert.io";
 //*** PUSH MSG TO PHONE
 const char *host = "www.espert.io";
 const int httpPort = 80;
-const char *path = "/MySmartphone/send?key=4952895585779712&message=Feed%20the%20FiSh";
+const char *path = "/MySmartphone/send?key=xxxxxxxxxxxxxxxx&message=Feed%20the%20FiSh"; //xxx is the key for phone from espert.io
 
 int currentSwitch = true;
 String outTopic = "ESPert/" + String(espert.info.getChipId()) + "/FEED";
@@ -55,7 +55,7 @@ int y;
     }
      
   //*** SEND MESSAGE
-    const char *path = "/MySmartphone/send?key=4952895585779712&message=DONE";
+    const char *path = "/MySmartphone/send?key=xxxxxxxxxxxxxxxx&message=DONE"; //xxx is the key for phone from espert.io
     espert.println("Connecting...");
     espert.println(">>" + espert.wifi.getHTTP(host, path) + "<<");      //SEND "DONE"
     espert.oled.println("D O N E");
